@@ -1,0 +1,21 @@
+<section class="container-fluid row text-center">
+    <div class="jumbotron col-md-12">
+      <p>Just View It</p>
+      <input type="text" ng-model="searcher" placeholder="search">
+    </div>
+    <div class="col-md-6">
+      <ul class="list-group">
+          <li ng-repeat="customer in customers | filter:searcher" class="list-group-item">{{customer.name}} , {{customer.city}}</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <form ng-submit="add()">
+          <input type="text" ng-model="name" placeholder="Enter name here"> <br>
+          <input type="text" ng-model="city" placeholder="Enter city here"> <br>
+          <input class="btn btn-md btn-success"type="submit" value="Add"/>
+      </form>
+    </div>
+    <footer class="well col-md-12">
+      <a href="#/home" class="btn btn-md btn-info">Back to HomePage</a>
+    </footer>
+</section>
